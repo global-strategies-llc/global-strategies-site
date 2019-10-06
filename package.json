@@ -1,11 +1,11 @@
 {
-  "name": "yellowcake",
-  "HomePage": "https://yellowcake.netlify.com/",
-  "description": "An opinionated starter project for creating lightning-fast websites with Gatsby v2 and Netlify CMS v2",
-  "version": "2.0.0",
+  "name": "global-strategies-site",
+  "HomePage": "https://global-strategies-site.netlify.com/",
+  "description": "A project porfolio site built with Gatsby v2 and Netlify CMS v2",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thriveweb/yellowcake"
+    "url": "https://github.com/global-strategies-llc/global-strategies-site"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
