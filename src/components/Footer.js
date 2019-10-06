@@ -1,6 +1,6 @@
 import React from 'react'
 import InstagramFeed from './InstagramFeed'
-import './Footer.css'
+import './Footer.scss'
 
 export default () => (
   <div>

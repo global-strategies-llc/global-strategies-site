@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import Image from './Image'
 
-import './BackgroundVideo.css'
+import './BackgroundVideo.scss'
 
 class BackgroundVideo extends Component {
   constructor(props) {

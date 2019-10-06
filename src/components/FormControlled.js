@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { stringify } from 'qs'
 
-import './Form.css'
-import './FormControlled.css'
+import './Form.scss'
+import './FormControlled.scss'
 
 const fetch = window.fetch
 

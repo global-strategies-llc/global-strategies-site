@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Form.css'
+import './Form.scss'
 
 export default ({
   name = 'Simple Form',

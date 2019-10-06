@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
 import Logo from './Logo'
 
-import './Nav.css'
+import './Nav.scss'
 
 export class Navigation extends Component {
   state = {

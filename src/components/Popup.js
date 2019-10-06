@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { X } from 'react-feather'
 
-import './Popup.css'
+import './Popup.scss'
 
 class Popup extends Component {
   constructor(props) {

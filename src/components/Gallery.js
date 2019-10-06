@@ -6,7 +6,7 @@ import Image from './Image'
 
 import _kebabCase from 'lodash/kebabCase'
 
-import './Gallery.css'
+import './Gallery.scss'
 import 'react-photoswipe/lib/photoswipe.css'
 
 export const query = graphql`

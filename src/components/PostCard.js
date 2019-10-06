@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Image from './Image'
-import './PostCard.css'
+import './PostCard.scss'
 
 const PostCard = ({
   featuredImage,

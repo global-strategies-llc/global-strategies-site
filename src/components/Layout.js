@@ -7,7 +7,7 @@ import Footer from './Footer'
 import GithubCorner from './GithubCorner'
 
 import 'modern-normalize/modern-normalize.css'
-import './globalStyles.css'
+import './globalStyles.scss'
 
 export default ({ children, meta, title }) => {
   return (

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Observer from './Observer'
 
-import './Image.css'
+import './Image.scss'
 
 class Image extends React.Component {
   constructor(props) {

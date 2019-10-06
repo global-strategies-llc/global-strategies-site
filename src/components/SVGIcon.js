@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './SVGIcon.css'
+import './SVGIcon.scss'
 
 export default ({ src }) => {
   const icon = {
