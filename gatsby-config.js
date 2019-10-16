@@ -133,6 +133,14 @@ module.exports = {
         enableIdentityWidget: true
       }
     },
+    {
+			resolve: 'gatsby-plugin-web-font-loader',
+			options: {
+				google: {
+					families: ['Noto Sans', 'Noto Serif']
+				}
+			}
+		},
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 }
