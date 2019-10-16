@@ -7,7 +7,8 @@ excerpt: >-
   Lorem ipsum pariatur velit commodo voluptate elit dolore cupidatat ut officia
   ex et anim in ut in labore excepteur labore veniam dolore mollit culpa elit in
   aliqua culpa elit mollit.
-categories: []
+categories:
+  - category: Updates
 ---
 
 
