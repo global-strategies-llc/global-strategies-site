@@ -16,14 +16,18 @@ class Popup extends Component {
   }
 
   render() {
-    const { children } = this.props
+    const { isButton, label, children } = this.props
     return (
       <Fragment>
-        <div className="taCenter">
-          <h3> Simple Popup Example</h3>
-          <div class="Button" onClick={this.togglePopup.bind(this)}>
-            Click To Launch Popup
-          </div>
+        <div className="Popup taCenter">
+          {/* eslint-disable-next-line */}
+          <a
+            href="#"
+            className={isButton ? 'Button' : ''}
+            onClick={this.togglePopup.bind(this)}
+          >
+            {label}
+          </a>
         </div>
 
         {this.state.showPopup ? (
@@ -33,8 +37,11 @@ class Popup extends Component {
               onClick={this.togglePopup.bind(this)}
             ></div>
             <div className="Popup-Inner">
-              <X class="Popup-Close" onClick={this.togglePopup.bind(this)} />
-              {children}
+              <X
+                className="Popup-Close"
+                onClick={this.togglePopup.bind(this)}
+              />
+              <div className="Popup-Content">{children}</div>
             </div>
           </div>
         ) : null}

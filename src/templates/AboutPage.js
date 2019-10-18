@@ -61,8 +61,9 @@ export const AboutPageTemplate = ({
     </section>
 
     <section className="section">
-      <div className="container">
-        <Popup>
+      <div className="container taCenter">
+        <h3>Simple Popup Example</h3>
+        <Popup isButton label="Click to Open">
           <Content source={section1} />
         </Popup>
       </div>
