@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        /*id: 'GTM-add_your_tag_here',*/
+        id: 'GTM-WMV5C6D',
         includeInDevelopment: false
       }
     },
@@ -134,13 +134,13 @@ module.exports = {
       }
     },
     {
-			resolve: 'gatsby-plugin-web-font-loader',
-			options: {
-				google: {
-					families: ['Noto Sans', 'Noto Serif']
-				}
-			}
-		},
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Sans', 'Noto Serif']
+        }
+      }
+    },
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 }
