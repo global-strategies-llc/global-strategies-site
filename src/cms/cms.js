@@ -1,5 +1,6 @@
 import React from 'react'
 import CMS from 'netlify-cms-app'
+import uploadcare from 'netlify-cms-media-library-uploadcare'
 import './cms-utils'
 
 import { HomePageTemplate } from '../templates/HomePage'
@@ -8,6 +9,8 @@ import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
+
+CMS.registerMediaLibrary(uploadcare)
 
 if (
   window.location.hostname === 'localhost' &&
