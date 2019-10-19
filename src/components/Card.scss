@@ -2,20 +2,24 @@
   display: flex;
   flex-flow: column nowrap;
   position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lightGrey);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadow);
 }
 
 .Card--Image {
   position: relative;
   width: 100%;
-  padding-bottom: 66.666%;
+  padding-bottom: 75%;
 
   img {
     position: absolute;
-    top: 50%;
+    width: 100%;
+    top: 55%;
     left: 50%;
-    height: 100%;
-    transform: translate(-50%, -50%);
     background: var(--lightGrey);
+    transform: translate(-50%, -50%);
   }
 }
 
