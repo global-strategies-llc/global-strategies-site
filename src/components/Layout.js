@@ -4,10 +4,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
-import GithubCorner from './GithubCorner'
+// import GithubCorner from './GithubCorner'
 
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.scss'
+import './Layout.scss'
 
 export default ({ children, meta, title }) => {
   return (
@@ -40,8 +41,16 @@ export default ({ children, meta, title }) => {
         }
       `}
       render={data => {
-        const { siteTitle, socialMediaCard, googleTrackingId } =
-            data.settingsYaml || {},
+        const {
+            siteTitle,
+            siteDescription,
+            socialMediaCard,
+            googleTrackingId
+          } = data.settingsYaml || {},
+          heading = {
+            company: siteTitle,
+            tagline: siteDescription
+          },
           subNav = {
             posts: data.allPosts.hasOwnProperty('edges')
               ? data.allPosts.edges.map(post => {
@@ -52,16 +61,13 @@ export default ({ children, meta, title }) => {
 
         return (
           <Fragment>
+            {console.log(heading)}
             <Helmet
               defaultTitle={siteTitle}
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-              <link
-                href="https://ucarecdn.com"
-                rel="preconnect"
-                crossorigin
-              />
+              <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
               <link rel="dns-prefetch" href="https://ucarecdn.com" />
               {/* Add font link tags here */}
             </Helmet>
@@ -77,9 +83,9 @@ export default ({ children, meta, title }) => {
               {...data.settingsYaml}
             />
 
-            <GithubCorner url="https://github.com/global-strategies-llc" />
+            {/* <GithubCorner url="https://github.com/global-strategies-llc" /> */}
 
-            <Nav subNav={subNav} />
+            <Nav heading={heading} subNav={subNav} />
 
             <Fragment>{children}</Fragment>
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
-import Logo from './Logo'
+// import Logo from './Logo'
 
 import './Nav.scss'
 
@@ -26,9 +26,12 @@ export class Navigation extends Component {
       activeSubNav: this.state.activeSubNav === subNav ? false : subNav
     })
 
+  markdownToStrong = text =>
+    text.replace(/\*{2}(.*?)\*{2}/, <strong>$1</strong>)
+
   render() {
     const { active } = this.state,
-      { subNav } = this.props,
+      { heading } = this.props,
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
@@ -45,11 +48,19 @@ export class Navigation extends Component {
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          <Link to="/" onClick={this.handleLinkClick}>
-            <Logo />
-          </Link>
+          <div className="Nav--Brand">
+            <Link to="/">{/* <Logo /> */}</Link>
+            <div>
+              {heading.company ? (
+                <Link to="/">
+                  <h2>{heading.company}</h2>
+                </Link>
+              ) : null}
+              {heading.tagline ? <h3>{heading.tagline}</h3> : null}
+            </div>
+          </div>
           <div className="Nav--Links">
-            <NavLink to="/">Home</NavLink>
+            {/* <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
             <div
               className={`Nav--Group ${
@@ -82,8 +93,8 @@ export class Navigation extends Component {
                   </NavLink>
                 ))}
               </div>
-            </div>
-            <NavLink to="/default/">Default</NavLink>
+            </div> */}
+            <NavLink to="/bio/">Bio</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
           <button
@@ -98,6 +109,8 @@ export class Navigation extends Component {
   }
 }
 
-export default ({ subNav }) => (
-  <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
+export default ({ heading, subNav }) => (
+  <Location>
+    {route => <Navigation heading={heading} subNav={subNav} {...route} />}
+  </Location>
 )
