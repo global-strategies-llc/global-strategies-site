@@ -86,29 +86,21 @@ collections: # A list of collections the CMS should be able to edit
           - label: 'Bio'
             name: 'section1'
             widget: 'list'
-            fields: 
+            fields:
               - { label: Name, name: name, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Image, name: image, widget: image }
-              - { 
-                  label: Social, 
-                  name: social, 
-                  widget: list, 
-                  fields: 
-                    - { 
-                        label: Platform, 
-                        name: platform, 
-                        widget: select, 
-                        options: [
-                          'Facebook',
-                          'LinkedIn', 
-                          'Twitter', 
-                          'Github'
-                        ] 
-                      }
-                    - { label: URL, name: url, widget: string }
-                }
-          }
+              - label: Social
+                name: social
+                widget: list
+                fields:
+                  - {
+                      label: Platform,
+                      name: platform,
+                      widget: select,
+                      options: ['Facebook', 'LinkedIn', 'Twitter', 'Github'],
+                    }
+                  - { label: URL, name: url, widget: string }
           - { label: Section 2, name: section2, widget: markdown }
           - { name: video, label: video, widget: file }
           - { name: videoPoster, label: videoPoster, widget: image }
@@ -265,8 +257,6 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
-
-
 
   - name: infoPages
     label: Info Page
