@@ -17,7 +17,11 @@
 
 .PageHeader--Title {
   margin-bottom: 0;
-  font-size: 6rem;
+  font-family: var(--font-secondary);
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .PageHeader--Subtitle {
