@@ -83,7 +83,32 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Title, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Section 1, name: section1, widget: markdown }
+          - label: 'Bio', 
+            name: 'section1', 
+            widget: 'list'
+            fields: 
+              - { label: Name, name: name, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { 
+                  label: Social, 
+                  name: social, 
+                  widget: list, 
+                  fields: 
+                    - { 
+                        label: Platform, 
+                        name: platform, 
+                        widget: select, 
+                        options: [
+                          'Facebook',
+                          'LinkedIn', 
+                          'Twitter', 
+                          'Github'
+                        ] 
+                      }
+                    - { label: URL, name: url, widget: string }
+                }
+          }
           - { label: Section 2, name: section2, widget: markdown }
           - { name: video, label: video, widget: file }
           - { name: videoPoster, label: videoPoster, widget: image }

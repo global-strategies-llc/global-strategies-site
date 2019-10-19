@@ -1,0 +1,45 @@
+.Bio--Container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: 42em;
+  margin: 0;
+}
+
+.Bio {
+  flex: 0 1 18em;
+  margin: 0 0 2em;
+  border: 1px solid var(--lightGrey);
+
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  &:nth-child(odd) {
+    margin-right: 5em;
+  }
+
+  h5 {
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+}
+
+.Bio--Social {
+  margin-top: 2em;
+  a {
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .Bio--Container {
+    flex-direction: column;
+  }
+  .Bio {
+    width: 100%;
+    max-width: 20em;
+    margin: 0 auto 2em !important;
+  }
+}

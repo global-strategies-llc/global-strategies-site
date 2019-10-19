@@ -4,10 +4,9 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content.js'
 import Layout from '../components/Layout.js'
-import Accordion from '../components/Accordion'
-import BackgroundVideo from '../components/BackgroundVideo'
-import Gallery from '../components/Gallery'
-import Popup from '../components/Popup'
+import Card from '../components/Card.js'
+
+import './AboutPage.scss'
 
 // Export Template for use in CMS preview
 export const AboutPageTemplate = ({
@@ -15,13 +14,7 @@ export const AboutPageTemplate = ({
   subtitle,
   featuredImage,
   section1,
-  section2,
-  video,
-  videoPoster,
-  videoTitle,
-  accordion,
-  body,
-  gallery
+  section2
 }) => (
   <main>
     <PageHeader
@@ -31,41 +24,26 @@ export const AboutPageTemplate = ({
     />
     <section className="section">
       <div className="container">
-        <Content source={section1} />
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <h2>Our gallery component</h2>
-        <Gallery images={gallery} />
+        <div className="Bio--Container">
+          {section1.map((bio, i) => (
+            <Card key={i} className="Bio" img={bio.image} heading={bio.name}>
+              <p>{bio.title}</p>
+              <div className="Bio--Social">
+                {bio.social.map(profile => (
+                  <a key={profile.url} href={profile.url}>
+                    {profile.platform} Profile
+                  </a>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
 
     <section className="section">
       <div className="container">
         <Content source={section2} />
-      </div>
-    </section>
-
-    <section className="BackgroundVideo-section section">
-      <BackgroundVideo poster={videoPoster} videoTitle={videoTitle}>
-        {video && <source src={video} type="video/mp4" />}
-      </BackgroundVideo>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <Accordion items={accordion} />
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container taCenter">
-        <h3>Simple Popup Example</h3>
-        <Popup isButton label="Click to Open">
-          <Content source={section1} />
-        </Popup>
       </div>
     </section>
   </main>
@@ -86,22 +64,22 @@ export const pageQuery = graphql`
   query AboutPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
-      ...Gallery
       html
       frontmatter {
         title
         template
         subtitle
         featuredImage
-        section1
-        section2
-        video
-        videoPoster
-        videoTitle
-        accordion {
+        section1 {
+          image
+          name
           title
-          description
+          social {
+            platform
+            url
+          }
         }
+        section2
       }
     }
   }
