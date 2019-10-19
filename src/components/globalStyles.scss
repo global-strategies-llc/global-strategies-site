@@ -7,6 +7,7 @@
   --darkGrey: #272727;
   --danger: #ff3d3d;
   --font-primary: 'Noto Sans', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
@@ -46,13 +47,16 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
+}
+
+#___gatsby {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #gatsby-focus-wrapper {

@@ -3,7 +3,11 @@ const postcssPresetEnv = require('postcss-preset-env')
 module.exports = {
   siteMetadata: {
     title: 'Websites by Global Strategies, LLC',
-    siteUrl: 'https://global-strategies-site.netlify.com'
+    siteUrl: 'https://global-strategies-site.netlify.com',
+    heading: {
+      h2: 'Global Strategies',
+      h3: 
+    }
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -137,7 +141,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Noto Sans', 'Noto Serif']
+          families: ['Noto Sans', 'Noto Serif', 'Roboto']
         }
       }
     },
