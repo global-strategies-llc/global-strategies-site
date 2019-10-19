@@ -25,18 +25,24 @@ export const AboutPageTemplate = ({
     <section className="section">
       <div className="container">
         <div className="Bio--Container">
-          {section1.map((bio, i) => (
-            <Card key={i} className="Bio" img={bio.image} heading={bio.name}>
-              <p>{bio.title}</p>
-              <div className="Bio--Social">
-                {bio.social.map(profile => (
-                  <a key={profile.url} href={profile.url}>
-                    {profile.platform} Profile
-                  </a>
-                ))}
-              </div>
-            </Card>
-          ))}
+          {section1.map((bio, i) => {
+            const image = {
+              src: bio.image,
+              alt: bio.name
+            }
+            return (
+              <Card key={i} className="Bio" img={image} heading={bio.name}>
+                <p>{bio.title}</p>
+                <div className="Bio--Social">
+                  {bio.social.map(profile => (
+                    <a key={profile.url} href={profile.url}>
+                      {profile.platform} Profile
+                    </a>
+                  ))}
+                </div>
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>

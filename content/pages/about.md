@@ -29,6 +29,5 @@ section2: >-
   commodo sunt deserunt voluptate ipsum ut proident consequat.
 meta:
   description: Partner with Global Strategies for effective digital marketing solutions.
-  title: About Global Strategies
+  title: About Us
 ---
-

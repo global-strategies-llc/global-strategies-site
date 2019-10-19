@@ -8,9 +8,8 @@
 }
 
 .Bio {
-  flex: 0 1 18em;
+  flex: 0 1 16em;
   margin: 0 0 2em;
-  border: 1px solid var(--lightGrey);
 
   &:nth-child(even) {
     margin-right: 0;
@@ -38,6 +37,7 @@
     flex-direction: column;
   }
   .Bio {
+    flex-basis: auto;
     width: 100%;
     max-width: 20em;
     margin: 0 auto 2em !important;
