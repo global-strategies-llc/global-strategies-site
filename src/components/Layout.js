@@ -61,7 +61,6 @@ export default ({ children, meta, title }) => {
 
         return (
           <Fragment>
-            {console.log(heading)}
             <Helmet
               defaultTitle={siteTitle}
               titleTemplate={`%s | ${siteTitle}`}
