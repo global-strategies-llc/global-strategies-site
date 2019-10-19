@@ -3,11 +3,7 @@ const postcssPresetEnv = require('postcss-preset-env')
 module.exports = {
   siteMetadata: {
     title: 'Websites by Global Strategies, LLC',
-    siteUrl: 'https://global-strategies-site.netlify.com',
-    heading: {
-      h2: 'Global Strategies',
-      h3: 
-    }
+    siteUrl: 'https://global-strategies-site.netlify.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
