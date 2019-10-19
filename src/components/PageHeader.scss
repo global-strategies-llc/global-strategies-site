@@ -1,7 +1,10 @@
 .PageHeader {
-  background-color: var(--darkGrey);
+  display: flex;
+  align-items: center;
+  min-height: 16rem;
+  padding: 2rem 0;
   color: white;
-  padding: 15rem 0;
+  background-color: var(--darkGrey);
 }
 
 .PageHeader .BackgroundImage {
@@ -9,17 +12,17 @@
 }
 
 .PageHeader-large {
-  padding: 20rem 0;
+  min-height: 24rem;
 }
 
 .PageHeader--Title {
-  font-size: 6rem;
   margin-bottom: 0;
+  font-size: 6rem;
 }
 
 .PageHeader--Subtitle {
-  font-weight: 400;
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .PageHeader .container {
