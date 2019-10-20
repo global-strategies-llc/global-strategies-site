@@ -34,14 +34,7 @@ export const HomePageTemplate = ({ services, posts, body }) => (
         </div>
       </div>
     </section>
-    {!!posts.length && (
-      <section className="section">
-        <div className="container">
-          <h2>Recent Writings</h2>
-          <PostSection posts={posts} limit={2} />
-        </div>
-      </section>
-    )}
+    
   </main>
 )
 
