@@ -2,14 +2,16 @@
 template: HomePage
 slug: ''
 title: Global Strategies
-featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
-subtitle: 'UX and Design strategy, business and product management, coaching'
+services:
+  - description: Leverage our Fortune 100 experience to build your custom website.
+    image: >-
+      https://ucarecdn.com/81b369f9-179d-48d8-a171-50abbf34d44a/-/crop/1078x855/2,0/-/preview/
+    name: Build Custom Websites
+  - description: We can architect and design specific product features for you.
+    image: 'https://ucarecdn.com/ecceaa80-eefb-4122-acbb-b32a02a81588/'
+    name: UX Architecture and Design
 meta:
   description: 'We are based in Charlotte, NC and Bozeman, MT.'
   title: 'Global Strategies | UX, Design & Product Strategy'
-services:
-  - image: ''
-    name: Build Custom Websites
-    description: >-
-      Leverage our Fortune 100 experience to build your custom website.
 ---
+<!-- -->
