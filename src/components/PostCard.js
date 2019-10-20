@@ -9,6 +9,7 @@ const PostCard = ({
   title,
   excerpt,
   slug,
+  frontmatter,
   categories = [],
   className = '',
   ...props
@@ -24,7 +25,11 @@ const PostCard = ({
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
-      {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
+      {frontmatter.excerpt ? (
+        <div className="PostCard--Excerpt">{frontmatter.excerpt}</div>
+      ) : excerpt ? (
+        <div className="PostCard--Excerpt">{excerpt}</div>
+      ) : null}
     </div>
   </Link>
 )

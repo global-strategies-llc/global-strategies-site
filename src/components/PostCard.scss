@@ -5,15 +5,15 @@
   border: 1px solid var(--lightGrey);
   border-radius: var(--borderRadius);
   box-shadow: var(--boxShadow);
-  transition: all 0.15s ease-in-out;
+  // transition: all 0.15s ease-in-out;
   overflow: hidden;
 }
 
-.PostCard:hover,
-.PostCard:focus {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-}
+// .PostCard:hover,
+// .PostCard:focus {
+//   transform: translateY(-1px);
+//   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+// }
 
 .PostCard--Image {
   margin: 0 0 2rem 0;
@@ -23,6 +23,10 @@
 
 .PostCard--Title {
   margin: 0;
+
+  &:first-child {
+    margin-top: 2em;
+  }
 }
 
 .PostCard--Content {
