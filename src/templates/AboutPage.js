@@ -6,7 +6,16 @@ import Content from '../components/Content.js'
 import Layout from '../components/Layout.js'
 import Card from '../components/Card.js'
 
+import LinkedIn from '../images/social/linkedin.svg'
+
 import './AboutPage.scss'
+
+const SocialIcons = {
+  // Facebook,
+  // Github,
+  LinkedIn
+  // Twitter
+}
 
 // Export Template for use in CMS preview
 export const AboutPageTemplate = ({
@@ -34,11 +43,15 @@ export const AboutPageTemplate = ({
               <Card key={i} className="Bio" img={image} heading={bio.name}>
                 <p>{bio.title}</p>
                 <div className="Bio--Social">
-                  {bio.social.map(profile => (
-                    <a key={profile.url} href={profile.url}>
-                      {profile.platform} Profile
-                    </a>
-                  ))}
+                  {bio.social.map(profile => {
+                    const Icon = SocialIcons[profile.platform]
+                    return (
+                      <a key={profile.url} href={profile.url}>
+                        <Icon className={profile.platform} /> {profile.platform}{' '}
+                        Profile
+                      </a>
+                    )
+                  })}
                 </div>
               </Card>
             )

@@ -27,8 +27,17 @@
 .Bio--Social {
   margin-top: 2em;
   a {
+    display: flex;
+    align-items: center;
     font-size: 0.9em;
     text-decoration: none;
+
+    svg {
+      width: 1.2em;
+      height: 1.2em;
+      fill: var(--primary);
+      margin-right: 0.5em;
+    }
   }
 }
 
