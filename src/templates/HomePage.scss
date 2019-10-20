@@ -11,21 +11,26 @@ h2 {
   margin: 0;
 }
 
-.Service {
+.Service,
+.PostCard {
   flex: 0 1 20em;
-  margin: 0 0 2em;
+  margin: 0 0 em;
 
   &:nth-child(even) {
     margin-right: 0;
   }
   &:nth-child(odd) {
-    margin-right: 5em;
+    margin-right: 4em;
   }
 
   h5 {
     font-size: 1.1em;
     font-weight: 700;
   }
+}
+
+.PostSection--Grid {
+  justify-content: flex-start;
 }
 
 .PostCard {
@@ -46,7 +51,18 @@ h2 {
   margin-top: 2em;
 }
 
-@media screen and (max-width: 56em) {
+@media screen and (min-width: 1281px) {
+  .PostCard {
+    &:nth-child(even) {
+      margin-right: 4em;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
   .Services--Container {
     flex-direction: column;
   }
@@ -57,9 +73,13 @@ h2 {
     max-width: 24em;
     margin: 0 auto 2em !important;
   }
+}
 
+@media screen and (max-width: 600px) {
   .PostSection--Grid > * {
     width: auto;
+    max-width: none;
     margin: 0 0 4rem;
+    flex-basis: 100%;
   }
 }
