@@ -1,0 +1,59 @@
+h2 {
+  margin: 1em 0 2em;
+}
+
+.Services--Container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: 50em;
+  margin: 0;
+}
+
+.Service {
+  flex: 0 1 20em;
+  margin: 0 0 2em;
+
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  &:nth-child(odd) {
+    margin-right: 5em;
+  }
+
+  h5 {
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+}
+
+.PostCard {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 20em;
+  min-height: 20em;
+  border: 0;
+  box-shadow: 0;
+}
+
+.PostCard--Content {
+  padding: 0;
+}
+
+.PostCard--Excerpt {
+  margin-top: 2em;
+}
+
+@media (max-width: 54em) {
+  .Services--Container {
+    flex-direction: column;
+  }
+  .Service {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 24em;
+    margin: 0 auto 2em !important;
+  }
+}

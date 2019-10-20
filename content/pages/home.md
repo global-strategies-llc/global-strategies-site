@@ -7,6 +7,9 @@ subtitle: 'UX and Design strategy, business and product management, coaching'
 meta:
   description: 'We are based in Charlotte, NC and Bozeman, MT.'
   title: 'Global Strategies | UX, Design & Product Strategy'
+services:
+  - image: ''
+    name: Build Custom Websites
+    description: >-
+      Leverage our Fortune 100 experience to build your custom website.
 ---
-
-## Services

@@ -1,24 +1,63 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Content from '../components/Content'
+import PostSection from '../components/PostSection'
 import Layout from '../components/Layout'
+import Card from '../components/Card'
+
+import './HomePage.scss'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ body }) => (
+export const HomePageTemplate = ({ services, posts, body }) => (
   <main className="Home">
     <section className="section">
       <div className="container">
-        <Content source={body} />
+        <h2>Services</h2>
+        <div className="Services--Container">
+          {services.map((service, i) => {
+            const image = {
+              src: service.image,
+              alt: service.name,
+              background: true
+            }
+            return (
+              <Card
+                key={i}
+                className="Service"
+                img={image}
+                heading={service.name}
+              >
+                <p>{service.description}</p>
+              </Card>
+            )
+          })}
+        </div>
       </div>
     </section>
+    {!!posts.length && (
+      <section className="section">
+        <div className="container">
+          <h2>Recent Writings</h2>
+          <PostSection posts={posts} limit={2} />
+        </div>
+      </section>
+    )}
   </main>
 )
 
 // Export Default HomePage for front-end
-const HomePage = ({ data: { page } }) => (
+const HomePage = ({ data: { page, posts } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <HomePageTemplate
+      {...page}
+      {...page.frontmatter}
+      body={page.html}
+      posts={posts.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+    />
   </Layout>
 )
 
@@ -35,8 +74,33 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
-        featuredImage
+        services {
+          image
+          name
+          description
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "posts" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            excerpt
+            categories {
+              category
+            }
+            featuredImage
+          }
+        }
       }
     }
   }
