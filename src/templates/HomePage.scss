@@ -35,7 +35,7 @@ h2 {
   width: 20em;
   min-height: 20em;
   border: 0;
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 .PostCard--Content {
@@ -46,14 +46,20 @@ h2 {
   margin-top: 2em;
 }
 
-@media (max-width: 54em) {
+@media screen and (max-width: 56em) {
   .Services--Container {
     flex-direction: column;
   }
+
   .Service {
     flex-basis: auto;
     width: 100%;
     max-width: 24em;
     margin: 0 auto 2em !important;
+  }
+
+  .PostSection--Grid > * {
+    width: auto;
+    margin: 0 0 4rem;
   }
 }
