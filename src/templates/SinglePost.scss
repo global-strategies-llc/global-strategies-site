@@ -1,9 +1,11 @@
+@import '../components/variables';
+
 .SinglePost {
   background: var(--lightGrey);
 }
 
 .SinglePost--BackButton {
-  color: white;
+  color: rgba($darkGrey, 0.5);
   position: relative;
   display: flex;
   align-items: center;
@@ -45,12 +47,13 @@
 }
 
 .SinglePost--Title {
+  margin-bottom: 6rem;
   text-align: center;
   line-height: 1.2;
 }
 
 .SinglePost--InnerContent {
-  padding: 0 8rem;
+  padding: 0;
 }
 
 @media screen and (max-width: 750px) {
