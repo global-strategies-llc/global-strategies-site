@@ -44,10 +44,13 @@ export const AboutPageTemplate = ({
                   <p>{bio.title}</p>
                   <div className="Bio--Social">
                     {bio.social.map(profile => {
-                      const Icon = SocialIcons[profile.platform]
+                      const Icon =
+                        'string' !== typeof SocialIcons[profile.platform]
+                          ? SocialIcons[profile.platform]
+                          : null
                       return (
                         <a key={profile.url} href={profile.url}>
-                          <Icon className={profile.platform} />{' '}
+                          {Icon && <Icon className={profile.platform} />}{' '}
                           {profile.platform} Profile
                         </a>
                       )
