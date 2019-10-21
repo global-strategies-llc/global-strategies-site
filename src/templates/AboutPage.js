@@ -10,13 +10,6 @@ import LinkedIn from '../images/social/linkedin.svg'
 
 import './AboutPage.scss'
 
-const SocialIcons = {
-  // Facebook,
-  // Github,
-  LinkedIn
-  // Twitter
-}
-
 // Export Template for use in CMS preview
 export const AboutPageTemplate = ({
   title,
@@ -24,49 +17,57 @@ export const AboutPageTemplate = ({
   featuredImage,
   section1,
   section2
-}) => (
-  <main>
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
-    <section className="section">
-      <div className="container">
-        <div className="Bio--Container">
-          {section1.map((bio, i) => {
-            const image = {
-              src: bio.image,
-              alt: bio.name
-            }
-            return (
-              <Card key={i} className="Bio" img={image} heading={bio.name}>
-                <p>{bio.title}</p>
-                <div className="Bio--Social">
-                  {bio.social.map(profile => {
-                    const Icon = SocialIcons[profile.platform]
-                    return (
-                      <a key={profile.url} href={profile.url}>
-                        <Icon className={profile.platform} /> {profile.platform}{' '}
-                        Profile
-                      </a>
-                    )
-                  })}
-                </div>
-              </Card>
-            )
-          })}
+}) => {
+  const SocialIcons = {
+    // Facebook,
+    // Github,
+    LinkedIn
+    // Twitter
+  }
+  return (
+    <main>
+      <PageHeader
+        title={title}
+        subtitle={subtitle}
+        backgroundImage={featuredImage}
+      />
+      <section className="section">
+        <div className="container">
+          <div className="Bio--Container">
+            {section1.map((bio, i) => {
+              const image = {
+                src: bio.image,
+                alt: bio.name
+              }
+              return (
+                <Card key={i} className="Bio" img={image} heading={bio.name}>
+                  <p>{bio.title}</p>
+                  <div className="Bio--Social">
+                    {bio.social.map(profile => {
+                      const Icon = SocialIcons[profile.platform]
+                      return (
+                        <a key={profile.url} href={profile.url}>
+                          <Icon className={profile.platform} />{' '}
+                          {profile.platform} Profile
+                        </a>
+                      )
+                    })}
+                  </div>
+                </Card>
+              )
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="section">
-      <div className="container">
-        <Content source={section2} />
-      </div>
-    </section>
-  </main>
-)
+      <section className="section">
+        <div className="container">
+          <Content source={section2} />
+        </div>
+      </section>
+    </main>
+  )
+}
 
 const AboutPage = ({ data: { page } }) => (
   <Layout
