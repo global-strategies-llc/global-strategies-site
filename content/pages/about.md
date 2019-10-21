@@ -17,6 +17,9 @@ section1:
       - platform: LinkedIn
         url: 'https://www.linkedin.com/in/sterlingrobot/'
     title: Front End Development
+  - image: 'https://ucarecdn.com/d73beb9c-25a2-4844-85e2-6cddb3e29511/'
+    name: Shane Johnson
+    title: Visual and Interactive Design
 section2: >-
   ## Companies
 
@@ -31,3 +34,4 @@ meta:
   description: Partner with Global Strategies for effective digital marketing solutions.
   title: About Us
 ---
+
