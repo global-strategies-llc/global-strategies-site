@@ -6,7 +6,7 @@ import Content from '../components/Content.js'
 import Layout from '../components/Layout.js'
 import Card from '../components/Card.js'
 
-import LinkedIn from '../images/social/linkedin.svg'
+import LinkedIn from '../images/social/linkedin.inline.svg'
 
 import './AboutPage.scss'
 
