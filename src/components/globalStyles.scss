@@ -46,11 +46,15 @@ body {
 }
 
 #___gatsby,
+#gatsby-focus-wrapper,
+body > div:first-child,
+.frame-content,
 #gatsby-focus-wrapper {
   height: 100%;
 }
 
-#___gatsby {
+#___gatsby,
+.frame-content {
   overflow-x: hidden;
   overflow-y: auto;
 }
