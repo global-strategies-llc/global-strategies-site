@@ -43,18 +43,19 @@ export const AboutPageTemplate = ({
                 <Card key={i} className="Bio" img={image} heading={bio.name}>
                   <p>{bio.title}</p>
                   <div className="Bio--Social">
-                    {bio.social.map(profile => {
-                      const Icon =
-                        'string' !== typeof SocialIcons[profile.platform]
-                          ? SocialIcons[profile.platform]
-                          : null
-                      return (
-                        <a key={profile.url} href={profile.url}>
-                          {Icon && <Icon className={profile.platform} />}{' '}
-                          {profile.platform} Profile
-                        </a>
-                      )
-                    })}
+                    {bio.social &&
+                      bio.social.map(profile => {
+                        const Icon =
+                          'string' !== typeof SocialIcons[profile.platform]
+                            ? SocialIcons[profile.platform]
+                            : null
+                        return (
+                          <a key={profile.url} href={profile.url}>
+                            {Icon && <Icon className={profile.platform} />}{' '}
+                            {profile.platform} Profile
+                          </a>
+                        )
+                      })}
                   </div>
                 </Card>
               )
