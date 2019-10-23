@@ -35,7 +35,7 @@
 
 .Form--Label > span {
   position: absolute;
-  left: 2rem;
+  left: 1.5rem;
   top: 1.5rem;
   transition: 0.3s ease all;
   opacity: 0.8;
@@ -49,9 +49,9 @@
   display: block;
   margin: 0;
   border: 1px solid #bababa;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
   border-radius: var(--borderRadius);
-  line-height: 1.25em;
+  line-height: 1.25;
   transition: border-color 0.2s;
   resize: none;
   width: 100%;
@@ -59,22 +59,23 @@
   background: transparent;
 }
 
-.Form--InputText:valid,
-.Form--InputText:invalid:not(:empty),
+.Form--InputText:valid.filled,
+.Form--InputText:invalid.filled,
 .Form--InputText:active,
 .Form--InputText:focus {
-  padding-bottom: 0.5rem;
-  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
 }
 
-.Form--InputText:valid + span,
-.Form--InputText:not(:empty) + span,
-.Form--InputText:invalid:not(:empty) + span,
+.Form--InputText.filled + span,
+.Form--InputText:valid.filled + span,
+.Form--InputText:invalid.filled + span,
 .Form--InputText:active + span,
 .Form--InputText:focus + span {
-  top: 0;
-  left: 0.5rem;
+  top: 0.2em;
+  left: 0.75rem;
   font-size: 1.2rem;
+  color: var(--midGrey);
 }
 
 .Form--Input:required:invalid:not(:empty) {
@@ -105,12 +106,7 @@
 
 .Form--Input:focus {
   outline: none;
-  border-color: black;
-}
-
-.Form--Input:focus {
-  outline: none;
-  border-color: black;
+  border-color: var(--primary);
 }
 
 .Form--Input[disabled],
