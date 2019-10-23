@@ -34,7 +34,17 @@ class Form extends React.Component {
 
     const form = e.target
     const data = serialize(form)
-    this.setState({ disabled: true })
+    data['g-recaptcha-response'] =
+      window.grecaptcha && window.grecaptcha.getResponse()
+
+    if (!data['g-recaptcha-response']) {
+      return this.setState({
+        disabled: false,
+        alert: `Please verify your humanity.  Click the checkbox next to "I'm not a robot"`
+      })
+    }
+
+    this.setState({ disabled: true, alert: '' })
     fetch(form.action + '?' + stringify(data), {
       method: 'POST'
     })
