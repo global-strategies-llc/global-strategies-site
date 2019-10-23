@@ -152,41 +152,31 @@ collections: # A list of collections the CMS should be able to edit
               label: Featured Image,
               name: featuredImage,
               widget: image,
+              required: false,
               options:
                 { media_library: { config: { imageShrink: 2600x2600 } } },
             }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Body, name: body, widget: markdown }
-          - { label: Address, name: address, widget: text }
-          - { label: Phone, name: phone, widget: string }
-          - { label: Email Address, name: email, widget: string }
+          - {
+              label: Subtitle,
+              name: subtitle,
+              widget: markdown,
+              required: false,
+            }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Phone, name: phone, widget: string, required: false }
+          - {
+              label: Email Address,
+              name: email,
+              widget: string,
+              required: false,
+            }
           - name: locations
-            label: locations
+            label: Locations
             widget: list
+            required: false
             fields:
-              - {
-                  name: mapLink,
-                  label: mapLink,
-                  widget: string,
-                  required: false,
-                  default: '',
-                }
-              - {
-                  name: lat,
-                  label: latitude,
-                  widget: string,
-                  required: false,
-                  delete: false,
-                  default: '',
-                }
-              - {
-                  name: lng,
-                  label: longitude,
-                  widget: string,
-                  required: false,
-                  delete: false,
-                  default: '',
-                }
+              - { label: Address, name: address, widget: text }
+
           - label: 'Meta'
             required: false
             name: 'meta'
