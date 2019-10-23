@@ -8,6 +8,7 @@ locations:
   - Charlotte, North Carolina
   - Bozeman, Montana
 phone: 555 555 5555
+email: ''
 meta:
   description: This is a meta description.
   title: Contact Page
