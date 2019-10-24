@@ -1,10 +1,41 @@
+@import './variables';
+
 .Form {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
   max-width: 500px;
   margin: 2.5rem 0;
+
+  &.Hidden {
+    display: none;
+  }
+}
+
+.Loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -2em;
+  left: -2em;
+  width: calc(100% + 4em);
+  height: calc(100% + 4em);
+  background: rgba($midGrey, 0.3);
+  z-index: 10;
+
+  > svg {
+    width: 8em;
+    height: 8em;
+    opacity: 0.2;
+    animation: spin 2s infinite cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+}
+
+.Form--Loading > .loading {
+  display: block;
 }
 
 .Form > * + * {
@@ -12,11 +43,11 @@
 }
 
 .Form--Group {
-  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
+  position: relative;
+  width: 100%;
 }
 
 .Form--Group .Form--Label {
@@ -24,47 +55,47 @@
 }
 
 .Form--Label {
-  width: 100%;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   position: relative;
+  width: 100%;
   z-index: 1;
   background: var(--white);
 }
 
 .Form--Label > span {
   position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
-  transition: 0.3s ease all;
   opacity: 0.8;
+  top: 1.5rem;
+  left: 1.5rem;
   z-index: -1;
+  transition: 0.3s ease all;
 }
 
 .Form--Input {
-  font-family: inherit;
-  flex-grow: 1;
   box-sizing: border-box;
   display: block;
-  margin: 0;
-  border: 1px solid #bababa;
-  padding: 1.5rem;
-  border-radius: var(--borderRadius);
-  line-height: 1.25;
-  transition: border-color 0.2s;
-  resize: none;
+  flex-grow: 1;
   width: 100%;
-  transition: 0.3s ease all;
+  margin: 0;
+  padding: 1.5rem;
+  font-family: inherit;
+  line-height: 1.25;
   background: transparent;
+  border: 1px solid #bababa;
+  border-radius: var(--borderRadius);
+  transition: border-color 0.2s;
+  transition: 0.3s ease all;
+  resize: none;
 }
 
 .Form--InputText:valid.filled,
 .Form--InputText:invalid.filled,
 .Form--InputText:active,
 .Form--InputText:focus {
-  padding-bottom: 1rem;
   padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .Form--InputText.filled + span,
@@ -90,12 +121,12 @@
 .Form--Label.has-arrow:after {
   content: '';
   position: absolute;
-  right: 2.5rem;
+  width: 10px;
+  height: 10px;
   top: 50%;
+  right: 2.5rem;
   border-right: 1px solid;
   border-bottom: 1px solid;
-  height: 10px;
-  width: 10px;
   transform: translateY(-75%) rotate(45deg);
   pointer-events: none;
 }
@@ -105,8 +136,8 @@
 }
 
 .Form--Input:focus {
-  outline: none;
   border-color: var(--primary);
+  outline: none;
 }
 
 .Form--Input[disabled],
@@ -121,10 +152,19 @@
 }
 
 .Form--Alert {
-  background: var(--lightGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  text-align: center;
   padding: 2rem;
+  text-align: center;
+  background: var(--lightGrey);
+
+  &.Success {
+    height: 100%;
+    color: $deep;
+    background: rgba($primary, 0.2);
+  }
 }
 
 .Form--Input-honey {
@@ -133,11 +173,11 @@
 
 .Form fieldset {
   width: 100%;
-  border: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
   height: 3.1rem;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+  border: none;
 }
 
 .Form--Radio {
@@ -150,23 +190,23 @@
 }
 
 .Form--Radio {
-  border: 1px solid var(--midGrey);
   overflow: hidden;
+  border: 1px solid var(--midGrey);
   border-radius: var(--borderRadius);
 }
 
 .Form--Radio span,
 .Form-Checkbox span {
+  display: inline-block;
   position: relative;
   top: auto;
   left: auto;
-  display: inline-block;
-  z-index: 1;
-  cursor: pointer;
-  user-select: none;
   padding: 0.2rem 1rem;
+  z-index: 1;
   border-left: 2.5rem solid transparent;
   border-radius: var(--borderRadius);
+  cursor: pointer;
+  user-select: none;
 }
 
 .Form--RadioInput,
@@ -177,46 +217,57 @@
 .Form--Radio .Form--RadioInput + span::before,
 .Form-Checkbox .Form--CheckboxInput + span::before {
   content: '';
+  display: block;
   position: absolute;
   width: 2rem;
   height: 2rem;
-  display: block;
-  right: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  right: 100%;
   background: var(--midGrey);
   border-radius: var(--borderRadius);
+  transform: translateY(-50%);
 }
 
 .Form--Radio .Form--RadioInput:checked + span::before,
 .Form-Checkbox .Form--CheckboxInput:checked + span::before {
   content: '';
+  display: block;
   position: absolute;
   width: 2rem;
   height: 2rem;
-  display: block;
-  right: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  right: 100%;
   background: var(--primary);
+  transform: translateY(-50%);
 }
 
 .Form--RadioInput + span::after,
 .Form--CheckboxInput + span::after {
-  transform: scale(0.5);
-  transition: 0.3s ease all;
   content: '\2713';
-  position: absolute;
   display: block;
+  position: absolute;
+  opacity: 0;
   top: 3px;
   left: -17px;
   font-weight: bold;
   color: white;
-  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.3s ease all;
 }
 
 .Form--RadioInput:checked + span::after,
 .Form--CheckboxInput:checked + span::after {
   opacity: 1;
   transform: scale(1);
+}
+
+@keyframes spin {
+  from {
+    opacity: 0.1;
+    transform: rotateZ(0deg);
+  }
+  to {
+    opacity: 0.3;
+    transform: rotateZ(360deg);
+  }
 }

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
+import { Loader } from 'react-feather'
 import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
 
@@ -10,14 +11,16 @@ class Form extends React.Component {
     name: 'Contact Us',
     subject: '', // optional subject of the notification email
     action: '',
-    successMessage: 'Thanks for your inquiry, we will be in touch soon',
+    successMessage: 'Thanks for your inquiry, we will be in touch soon!',
     errorMessage:
       'There is a problem, and your message has not been sent.  Please try contacting us via email at leo@globalstrategies.xyz'
   }
 
   state = {
     alert: '',
-    disabled: false
+    disabled: false,
+    loading: false,
+    success: false
   }
 
   onInput = e => {
@@ -44,7 +47,8 @@ class Form extends React.Component {
       })
     }
 
-    this.setState({ disabled: true, alert: '' })
+    this.setState({ disabled: true, loading: true, alert: '' })
+
     fetch(form.action + '?' + stringify(data), {
       method: 'POST'
     })
@@ -55,17 +59,22 @@ class Form extends React.Component {
           throw new Error('Network error')
         }
       })
+      .then(() => new Promise(resolve => setTimeout(() => resolve(), 3000)))
       .then(() => {
         form.reset()
+        window.grecaptcha.reset()
         this.setState({
           alert: this.props.successMessage,
-          disabled: false
+          disabled: false,
+          loading: false,
+          success: true
         })
       })
       .catch(err => {
         console.error(err)
         this.setState({
           disabled: false,
+          loading: false,
           alert: this.props.errorMessage
         })
       })
@@ -76,19 +85,24 @@ class Form extends React.Component {
 
     return (
       <Fragment>
+        {this.state.alert && (
+          <div className="Form--Alert">{this.state.alert}</div>
+        )}
         <Helmet>
           <script src="https://www.google.com/recaptcha/api.js" async defer />
         </Helmet>
         <form
-          className="Form"
+          className={['Form', this.state.success ? 'Hidden' : ''].join(' ')}
           name={name}
           action={action}
           onSubmit={this.handleSubmit}
           data-netlify="true"
           data-netlify-recaptcha="true"
         >
-          {this.state.alert && (
-            <div className="Form--Alert">{this.state.alert}</div>
+          {this.state.loading && (
+            <div className="Loader">
+              <Loader />
+            </div>
           )}
           <div className="Form--Group">
             <label className="Form--Label">

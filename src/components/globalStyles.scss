@@ -69,7 +69,13 @@ body > div:first-child,
   }
 
   main {
+    display: flex;
+    flex-flow: column nowrap;
     flex: 1;
+
+    > section {
+      flex: 1;
+    }
   }
 }
 

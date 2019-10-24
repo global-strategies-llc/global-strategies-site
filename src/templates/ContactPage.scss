@@ -30,7 +30,8 @@
   .Contact--Section1--Container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
+    height: 100%;
   }
 
   .Contact--Section1--Container > * {
