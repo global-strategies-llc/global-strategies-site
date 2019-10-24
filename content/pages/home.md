@@ -16,7 +16,7 @@ services:
     image: 'https://ucarecdn.com/f1a219d8-00f2-4130-be04-5c8f1180c7dc/'
     name: Digital Transformation
 meta:
-  description: 'We are based in Charlotte, NC and Bozeman, MT.'
+  description: 'We are based in Bozeman, MT.'
   title: 'Global Strategies | UX, Design & Product Strategy'
 ---
 <!-- 
