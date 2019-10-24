@@ -86,7 +86,14 @@ class Form extends React.Component {
     return (
       <Fragment>
         {this.state.alert && (
-          <div className="Form--Alert">{this.state.alert}</div>
+          <div
+            className={[
+              'Form--Alert',
+              this.state.success ? 'Success' : ''
+            ].join(' ')}
+          >
+            {this.state.alert}
+          </div>
         )}
         <Helmet>
           <script src="https://www.google.com/recaptcha/api.js" async defer />
