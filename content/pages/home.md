@@ -19,6 +19,12 @@ services:
       technological needs. 
     image: 'https://ucarecdn.com/f1a219d8-00f2-4130-be04-5c8f1180c7dc/'
     name: Technology
+  - description: >-
+      Install a new culture within your team that leverages the mindset and
+      mechanics of innovation and design thinking to deliver outcomes that make
+      a difference.
+    image: 'https://ucarecdn.com/4bf5ffcd-2a55-4fe2-9926-61fee1b5320b/'
+    name: In-House Coaching
 meta:
   description: 'We are based in Bozeman, MT.'
   title: 'Global Strategies | UX, Design & Product Strategy'
