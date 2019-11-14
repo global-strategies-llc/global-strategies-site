@@ -10,7 +10,7 @@ section1:
     social:
       - platform: LinkedIn
         url: 'https://www.linkedin.com/in/vroegindewey/'
-    title: 'End-to-End Design, UX Strategy, Marketing'
+    title: End-end experience design
   - image: 'https://ucarecdn.com/d457b190-379e-4ff6-bfd1-d7a1abbd4d7b/'
     name: Tor Gilbertson
     social:
@@ -22,13 +22,13 @@ section1:
     social:
       - platform: LinkedIn
         url: 'https://www.linkedin.com/in/shane-johnson-9a162379/'
-    title: 'Visual and Interactive Design, Identity,  Branding'
+    title: 'UX and Visual Design, Branding, Identity'
   - image: 'https://ucarecdn.com/5cec590e-4d10-4e3f-a950-31cd5fc23f8f/'
     name: Niels Vroegindewey
     social:
       - platform: LinkedIn
         url: 'https://www.linkedin.com/in/niels-vroegindewey-08a89444/'
-    title: 'Product Development, Business Strategy'
+    title: Business and product management
 section2: >-
   ## Our Team
 
