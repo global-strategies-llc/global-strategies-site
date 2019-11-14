@@ -27,7 +27,7 @@ services:
     name: In-House Coaching
 meta:
   description: 'We are based in Bozeman, MT.'
-  title: 'Global Strategies | UX, Design & Product Strategy'
+  title: 'Global Strategies | UX, Design & Product Strategy | Bozeman, MT'
 ---
 <!-- 
   'body' is not currently 
