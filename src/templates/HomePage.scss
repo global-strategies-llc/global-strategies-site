@@ -44,7 +44,7 @@ h2 {
 }
 
 .PostCard--Content {
-  padding: 0;
+  // padding: 0;
 }
 
 .PostCard--Excerpt {
@@ -67,11 +67,15 @@ h2 {
     flex-direction: column;
   }
 
+  .PostCard,
   .Service {
     flex-basis: auto;
     width: 100%;
-    max-width: 24em;
     margin: 0 auto 2em !important;
+  }
+
+  .Service {
+    max-width: 24em;
   }
 }
 
