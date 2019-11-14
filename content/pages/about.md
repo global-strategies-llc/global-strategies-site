@@ -16,13 +16,13 @@ section1:
     social:
       - platform: LinkedIn
         url: 'https://www.linkedin.com/in/sterlingrobot/'
-    title: Software Engineering
+    title: Software engineering
   - image: 'https://ucarecdn.com/d73beb9c-25a2-4844-85e2-6cddb3e29511/'
     name: Shane Johnson
     social:
       - platform: LinkedIn
         url: 'https://www.linkedin.com/in/shane-johnson-9a162379/'
-    title: 'UX and Visual Design, Branding, Identity'
+    title: 'UX and visual design, branding, identity'
   - image: 'https://ucarecdn.com/5cec590e-4d10-4e3f-a950-31cd5fc23f8f/'
     name: Niels Vroegindewey
     social:
