@@ -30,7 +30,7 @@ section1:
         url: 'https://www.linkedin.com/in/niels-vroegindewey-08a89444/'
     title: Business and product management
 section2: >-
-  ## Our Team
+  ## Hi,
 
 
   Could it be? Montana. Mountains. Fresh air. Great quality of life. And a group
