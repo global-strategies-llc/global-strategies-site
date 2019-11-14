@@ -1,7 +1,7 @@
 ---
 template: HomePage
 slug: ''
-title: Global Strategies
+title: 'Global Strategies, LLC'
 services:
   - description: >-
       Deliver a user-centric experience to your customers through the
@@ -15,8 +15,8 @@ services:
     image: 'https://ucarecdn.com/5fb52012-6bfe-4e20-80fd-4e6456793ba3/'
     name: Strategy
   - description: >-
-      Our technology team has the expertise and experience to meet your
-      technological needs. 
+      Our team has the expertise and experience to meet your technological
+      needs. 
     image: 'https://ucarecdn.com/f1a219d8-00f2-4130-be04-5c8f1180c7dc/'
     name: Technology
   - description: >-
