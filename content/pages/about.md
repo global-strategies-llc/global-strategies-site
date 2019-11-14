@@ -46,14 +46,12 @@ section2: >-
   tech experience that is hard to come by in Montana. 
 
 
-  It might be that our shared work experience which first brought us together as
-  a team. However, it is our shared trust and respect between us that made us
-  great co-workers and even better friends. It is this shared bond of mutual
-  respect and trust that sets us apart from other folks and allows us to deliver
-  amazing results because we function as a tight-knit unit where we only provide
+  It was our shared work experience which first brought us together as a team.
+  However, it is our shared trust and respect between us that made us great
+  co-workers and even better friends. It is this shared bond of mutual respect
+  and trust that sets us apart from other folks and allows us to deliver amazing
+  results because we function as a tight-knit unit where we only provide
   exceptional results. 
-
-
 
 
   Leo \~ Tor \~ Shane ~ Niels
