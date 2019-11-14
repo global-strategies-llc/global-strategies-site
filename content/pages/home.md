@@ -1,7 +1,7 @@
 ---
 template: HomePage
 slug: ''
-title: 'Global Strategies, LLC'
+title: Global Strategies
 services:
   - description: >-
       Deliver a user-centric experience to your customers through the
