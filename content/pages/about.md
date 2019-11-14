@@ -33,25 +33,30 @@ section2: >-
   ## Our Team
 
 
-  Nestled comfortably in the mountains at an elevation of 4,000 feet lies
-  Bozeman the tech hub of Montana. Leo, Tor and Shane worked previously at
-  Oracle on the Global Brand and Marketing team at the Bozeman office. 
+  Could it be? Montana. Mountains. Fresh air. Great quality of life. And a group
+  of friends that enjoy working together doing what they love. Tor, Shane,
+  Niels, and I have worked together at various stages in our tech careers. We
+  are experts in user-centric design, building websites, and software products
+  such as mobile apps and enterprise applications.
 
 
-  Prior to moving to Montana, Leo worked with Niels at a startup in Calgary,
-  Alberta. Niels is intimately familiar with shipping products, talking with
-  customers and guiding the development of user-centered products. 
+  As you can see from our LinkedIn profiles, we have a considerable amount of
+  experience. From working for small companies to large tech giants such as
+  Oracle. We have spent years honing our craft. We provide you with a level of
+  tech experience that is hard to come by in Montana. 
 
 
-  Together our team has decades of experience working in startups, government
-  organizations and corporate enterprises. We have the know how to build
-  user-centric products and websites with well crafted messaging.
+  It might be that our shared work experience which first brought us together as
+  a team. However, it is our shared trust and respect between us that made us
+  great co-workers and even better friends. It is this shared bond of mutual
+  respect and trust that sets us apart from other folks and allows us to deliver
+  amazing results because we function as a tight-knit unit where we only provide
+  exceptional results. 
 
 
-  We are fortunate in that we happen to be friends that all work in the tech
-  industry. We love what we do and work well together. If you have project or
-  task that we can help you with, feel free to reach out to us and together we
-  will help you be successful.
+
+
+  Leo \~ Tor \~ Shane ~ Niels
 meta:
   description: Partner with Global Strategies for effective digital marketing solutions.
   title: About Us
