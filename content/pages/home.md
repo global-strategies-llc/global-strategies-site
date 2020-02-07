@@ -27,7 +27,7 @@ services:
     name: In-House Coaching
 meta:
   description: 'We are based in Bozeman, MT.'
-  title: 'Global Strategies | Digital Transformation Consultancy | Bozeman, MT'
+  title: 'Global Strategies | Optimize Your Organization | Bozeman, MT'
 ---
 <!-- 
   'body' is not currently 
